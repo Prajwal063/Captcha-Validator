@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    background-color: #232931;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#captchaBackground {
+    height: 100%;
+    width: 100%;
+    max-width: 350px; 
+    background-color: #314361;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* margin: 10px auto; */
+    border-radius: 20px;
+}
+
+#captchaHeading {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#captcha {
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+    font-size: 40px;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#submitButton,
+#refreshButton {
+    font-family: 'Poppins', sans-serif;
+    background-color: #14b7c9;
+    color: white;
+    border: 0;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#textBox {
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+    max-width: 300px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 20px; 
+}
+
+.incorrectCaptcha,
+.correctCaptcha {
+    font-size: 18px;
+}
+
+.incorrectCaptcha {
+    color: #FF0000;
+}
+
+.correctCaptcha {
+    color: #02ff41;
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 600px) {
+    #captchaBackground {
+        max-width: 100%;
+    }
+
+    #textBox {
+        width: 100%;
+        max-width: none;
+    }
+}
