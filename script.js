@@ -38,9 +38,12 @@ ctx.fillText(emptyArr.join(''), captchaText.width/4, captchaText.height/2);
 // displayed after validating the input text with CAPTCHA
 userText.addEventListener('keyup', function(e) {
     if (e.key === 'Enter') {
+        output.classList.remove("correctCaptcha", "incorrectCaptcha"); 
+
         if (userText.value === c) {
             output.classList.add("correctCaptcha");
             output.innerHTML = "Correct!";
+            
         } else {
             output.classList.add("incorrectCaptcha");
             output.innerHTML = "Incorrect, please try again!";
