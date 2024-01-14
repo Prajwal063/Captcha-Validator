@@ -55,6 +55,8 @@ userText.addEventListener('keyup', function(e) {
 // "Correct!" or "Incorrect, please try again!" message is
 // displayed after validating the input text with CAPTCHA
 submitButton.addEventListener('click', function() {
+    output.classList.remove("correctCaptcha", "incorrectCaptcha");
+    
     if (userText.value === c) {
         output.classList.add("correctCaptcha");
         output.innerHTML = "Correct!";
