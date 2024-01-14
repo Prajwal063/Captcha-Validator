@@ -40,10 +40,14 @@ userText.addEventListener('keyup', function(e) {
     if (e.key === 'Enter') {
         output.classList.remove("correctCaptcha", "incorrectCaptcha"); 
 
-        if (userText.value === c) {
+        const enteredText = userText.value.trim(); // Remove leading and trailing spaces
+
+        if (enteredText === "") {
+            output.classList.add("incorrectCaptcha");
+            output.innerHTML = "Error: Please enter a value!";
+        } else if (enteredText === c) {
             output.classList.add("correctCaptcha");
             output.innerHTML = "Correct!";
-            
         } else {
             output.classList.add("incorrectCaptcha");
             output.innerHTML = "Incorrect, please try again!";
@@ -57,13 +61,18 @@ userText.addEventListener('keyup', function(e) {
 submitButton.addEventListener('click', function() {
     output.classList.remove("correctCaptcha", "incorrectCaptcha");
     
-    if (userText.value === c) {
-        output.classList.add("correctCaptcha");
-        output.innerHTML = "Correct!";
-    } else {
-        output.classList.add("incorrectCaptcha");
-        output.innerHTML = "Incorrect, please try again!";
-    }
+    const enteredText = userText.value.trim(); // Remove leading and trailing spaces
+
+        if (enteredText === "") {
+            output.classList.add("incorrectCaptcha");
+            output.innerHTML = "Error: Please enter a value!";
+        } else if (enteredText === c) {
+            output.classList.add("correctCaptcha");
+            output.innerHTML = "Correct!";
+        } else {
+            output.classList.add("incorrectCaptcha");
+            output.innerHTML = "Incorrect, please try again!";
+        }
 });
 
 // This event listener is stimulated whenever the user press the "Refresh" button

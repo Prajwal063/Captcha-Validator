@@ -3,10 +3,10 @@
 body {
     background-color: #232931;
     font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+
 }
+
 
 .container {
     max-width: 1200px;
